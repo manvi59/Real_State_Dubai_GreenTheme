@@ -20,13 +20,13 @@ const Slider = ({ className = "", defaultValue, value, min = 0, max = 100, ...pr
       {...props}
     >
       <SliderPrimitive.Track className="relative grow overflow-hidden rounded-full bg-gray-200 h-2">
-        <SliderPrimitive.Range className="absolute h-full bg-blue-500" />
+        <SliderPrimitive.Range className="absolute h-full bg-green-600" />
       </SliderPrimitive.Track>
 
       {Array.from({ length: _values.length }, (_, index) => (
         <SliderPrimitive.Thumb
           key={index}
-          className="block w-4 h-4 rounded-full bg-white border border-blue-500 shadow hover:bg-blue-100 focus:outline-none"
+          className="block w-4 h-4 rounded-full bg-white border border-green-500 shadow hover:bg-green-100 focus:outline-none"
         />
       ))}
     </SliderPrimitive.Root>

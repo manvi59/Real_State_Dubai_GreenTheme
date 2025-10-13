@@ -62,8 +62,8 @@ export function Header() {
                     ${
                       currentPage === item.id ||
                       (item.id === "home" && currentPage === "home")
-                        ? "text-indigo-600 bg-indigo-50"
-                        : "text-gray-700 hover:text-indigo-600 hover:bg-gray-50"
+                        ? "text-green-600 bg-green-50"
+                        : "text-gray-700 hover:text-green-600 hover:bg-gray-50"
                     }`}
                 >
                   {item.label}
@@ -76,8 +76,8 @@ export function Header() {
               //   onClick={() => onPageChange("about")}
               className={`px-3 py-2 rounded-md transition-colors ${
                 currentPage === "about"
-                  ? "text-indigo-600 bg-indigo-50"
-                  : "text-gray-700 hover:text-indigo-600 hover:bg-gray-50"
+                  ? "text-green-600 bg-green-50"
+                  : "text-gray-700 hover:text-green-600 hover:bg-gray-50"
               }`}
               style={{ cursor: "pointer !important" }}
             >
@@ -89,8 +89,8 @@ export function Header() {
               //   onClick={() => onPageChange("contact")}
               className={`px-3 py-2 rounded-md transition-colors ${
                 currentPage === "contact"
-                  ? "text-indigo-600 bg-indigo-50"
-                  : "text-gray-700 hover:text-indigo-600 hover:bg-gray-50"
+                  ? "text-green-600 bg-green-50"
+                  : "text-gray-700 hover:text-green-600 hover:bg-gray-50"
               }`}
               style={{ cursor: "pointer !important" }}
             >
@@ -115,7 +115,7 @@ export function Header() {
              <Link href={`/signin`}>
              
             <Button
-              // className="bg-indigo-600 hover:bg-indigo-700"
+              // className="bg-green-600 hover:bg-green-700"
               className="bg-green-600 hover:bg-green-700"
               style={{ cursor: "pointer !important" }}
             >
@@ -128,7 +128,7 @@ export function Header() {
           <div className="md:hidden">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="p-2 rounded-md text-gray-700 hover:text-indigo-600 hover:bg-gray-50"
+              className="p-2 rounded-md text-gray-700 hover:text-green-600 hover:bg-gray-50"
             >
               {/* {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />} */}
             </button>
@@ -149,8 +149,8 @@ export function Header() {
                   className={`w-full text-left px-3 py-2 rounded-md transition-colors ${
                     currentPage === item.id ||
                     (item.id === "home" && currentPage === "home")
-                      ? "text-indigo-600 bg-indigo-50"
-                      : "text-gray-700 hover:text-indigo-600 hover:bg-gray-50"
+                      ? "text-green-600 bg-green-50"
+                      : "text-gray-700 hover:text-green-600 hover:bg-gray-50"
                   }`}
                 >
                   {item.label}
@@ -163,8 +163,8 @@ export function Header() {
                 }}
                 className={`w-full text-left px-3 py-2 rounded-md transition-colors ${
                   currentPage === "about"
-                    ? "text-indigo-600 bg-indigo-50"
-                    : "text-gray-700 hover:text-indigo-600 hover:bg-gray-50"
+                    ? "text-green-600 bg-green-50"
+                    : "text-gray-700 hover:text-green-600 hover:bg-gray-50"
                 }`}
               >
                 About
@@ -176,8 +176,8 @@ export function Header() {
                 }}
                 className={`w-full text-left px-3 py-2 rounded-md transition-colors ${
                   currentPage === "contact"
-                    ? "text-indigo-600 bg-indigo-50"
-                    : "text-gray-700 hover:text-indigo-600 hover:bg-gray-50"
+                    ? "text-green-600 bg-green-50"
+                    : "text-gray-700 hover:text-green-600 hover:bg-gray-50"
                 }`}
               >
                 Contact

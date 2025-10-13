@@ -54,7 +54,7 @@ const BuyProperties = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <div className="bg-indigo-600 py-16 text-white" 
+      <div className="bg-green-600 py-16 text-white" 
         style={{
     width: '100%',
     height: '100%',
@@ -128,7 +128,7 @@ const BuyProperties = () => {
           </select>
         </div>
         <div className="flex justify-end mt-4">
-          <button className="bg-indigo-600 text-white px-6 py-2 rounded-lg flex items-center gap-2 hover:bg-indigo-600">
+          <button className="bg-green-600 text-white px-6 py-2 rounded-lg flex items-center gap-2 hover:bg-green-600">
             <Search className="w-4 h-4"  /> Search
           </button>
         </div>
@@ -148,7 +148,7 @@ const BuyProperties = () => {
             />
             <div className="p-6">
               <h3 className="text-xl font-bold mb-2">{property.title}</h3>
-              <p className="text-indigo-600 font-semibold mb-2">
+              <p className="text-green-600 font-semibold mb-2">
                 {property.price}
               </p>
               <p className="text-gray-600 flex items-center gap-1 mb-3">
@@ -169,7 +169,7 @@ const BuyProperties = () => {
               
               
                 <Link href="/property-detail" >
-              <button className="w-full bg-indigo-600  text-white py-2 rounded-lg hover:bg-indigo-700 transition" 
+              <button className="w-full bg-green-600  text-white py-2 rounded-lg hover:bg-green-700 transition" 
               style={{cursor:"pointer"}}
               >                View Details
               </button>

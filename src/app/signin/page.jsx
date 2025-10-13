@@ -49,7 +49,7 @@ export default function AuthPages({ mode, onPageChange }) {
       <div className="max-w-md w-full">
         <Card className="shadow-lg">
           <CardHeader className="text-center">
-            <div className="mx-auto w-12 h-12 bg-indigo-600 rounded-full flex items-center justify-center mb-4">
+            <div className="mx-auto w-12 h-12 bg-green-600 rounded-full flex items-center justify-center mb-4">
               <User className="w-6 h-6 text-white" />
             </div>
             <CardTitle className="text-2xl">
@@ -186,7 +186,7 @@ export default function AuthPages({ mode, onPageChange }) {
               {mode === 'signin' && (
                 <div className="flex items-center justify-between">
                   <label className="flex items-center">
-                    <input type="checkbox" className="rounded border-gray-300 text-indigo-600 shadow-sm focus:ring-indigo-500" />
+                    <input type="checkbox" className="rounded border-gray-300 text-green-600 shadow-sm focus:ring-green-500" />
                     <span className="ml-2 text-sm text-gray-600">Remember me</span>
                   </label>
                   <Button variant="link" className="text-sm p-0">
@@ -195,7 +195,7 @@ export default function AuthPages({ mode, onPageChange }) {
                 </div>
               )}
 
-              <Button type="submit" className="w-full bg-indigo-600 hover:bg-indigo-700">
+              <Button type="submit" className="w-full bg-green-600 hover:bg-green-700">
                 {mode === 'signin' ? 'Sign In' : 'Create Account'}
               </Button>
             </form>

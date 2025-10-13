@@ -1,42 +1,48 @@
 "use client";
 
 import { Home, Facebook, Twitter, Instagram, Linkedin, Mail, Phone, MapPin } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 
 export function Footer({ onPageChange }) {
   return (
-    <footer className="bg-gray-900 text-white">
+    <footer className="bg-white-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="space-y-4">
-            <div className="flex items-center">
-              <div className="bg-indigo-600 text-white p-2 rounded-lg mr-3">
-                <Home className="w-6 h-6" />
+            <div className="flex items-center mb-0">
+              <div className="  text-white  rounded-lg mr-3">
+                {/* <Home className="w-6 h-6" /> */}
+              
+              <Image src={"/milkiyat_logo.png"} width={85} height={85} alt="milkiyat"/>
+                
               </div>
-              <span className="text-xl font-semibold">PropertyHub</span>
+              <span className="text-xl font-semibold text-gray-900">
+                milkiyat
+              </span>
             </div>
-            <p className="text-gray-400">
+            <p className="text-gray-400 ">
               Your trusted partner in finding the perfect home. We connect buyers,
               sellers, and renters with the best properties in the market.
             </p>
             <div className="flex space-x-4">
-              <Facebook className="w-5 h-5 text-gray-400 hover:text-white cursor-pointer transition-colors" />
-              <Twitter className="w-5 h-5 text-gray-400 hover:text-white cursor-pointer transition-colors" />
-              <Instagram className="w-5 h-5 text-gray-400 hover:text-white cursor-pointer transition-colors" />
-              <Linkedin className="w-5 h-5 text-gray-400 hover:text-white cursor-pointer transition-colors" />
+              <Facebook className="w-5 h-5 text-green-700 hover:text-green-700 cursor-pointer transition-colors" />
+              <Twitter className="w-5 h-5 text-green-700 hover:text-green-700 cursor-pointer transition-colors" />
+              <Instagram className="w-5 h-5 text-green-700 hover:text-green-700 cursor-pointer transition-colors" />
+              <Linkedin className="w-5 h-5 text-green-700 hover:text-green-700 cursor-pointer transition-colors" />
             </div>
           </div>
 
           {/* Quick Links */}
           <div className="space-y-4">
-            <h3 className="text-lg font-semibold">Quick Links</h3>
+            <h3 className="text-lg font-semibold text-[#027103]">Quick Links</h3>
             <ul className="space-y-2">
               <li>
               <Link href="/about">
                 <button
                   style={{cursor:"pointer"}}
-                  className="text-gray-400 hover:text-white transition-colors"
+                  className="text-gray-400 hover:text-green-800 transition-colors"
                 >
                   About Us
                 </button>
@@ -46,7 +52,7 @@ export function Footer({ onPageChange }) {
                 <Link href="/property-listings"> 
                 <button
                 //   onClick={() => onPageChange("listings")}
-                  className="text-gray-400 hover:text-white transition-colors"
+                  className="text-gray-400 hover:text-green-800 transition-colors"
                    style={{cursor:"pointer"}}
                 >
                   Properties
@@ -57,7 +63,7 @@ export function Footer({ onPageChange }) {
                  <Link href="/agents"> 
                 <button
                 //   onClick={() => onPageChange("agents")}
-                  className="text-gray-400 hover:text-white transition-colors"
+                  className="text-gray-400 hover:text-green-800 transition-colors"
                    style={{cursor:"pointer"}}
                 >
                   Our Agents
@@ -68,7 +74,7 @@ export function Footer({ onPageChange }) {
                  <Link href="/contact"> 
                 <button
                 //   onClick={() => onPageChange("contact")}
-                  className="text-gray-400 hover:text-white transition-colors"
+                  className="text-gray-400 hover:text-green-800 transition-colors"
                    style={{cursor:"pointer"}}
                 >
                   Contact
@@ -79,7 +85,7 @@ export function Footer({ onPageChange }) {
                  <Link href="/blog"> 
                 <button
                 //   onClick={() => onPageChange("contact")}
-                  className="text-gray-400 hover:text-white transition-colors"
+                  className="text-gray-400 hover:text-green-800 transition-colors"
                    style={{cursor:"pointer"}}
                 >
                   Blog
@@ -91,7 +97,7 @@ export function Footer({ onPageChange }) {
 
           {/* Services */}
           <div className="space-y-4">
-            <h3 className="text-lg font-semibold">Services</h3>
+            <h3 className="text-lg font-semibold text-[#027103]">Services</h3>
             <ul className="space-y-2">
               <li className="text-gray-400" style={{cursor:"pointer"}}>
                 <Link href="/buy-properties" > 
@@ -116,20 +122,20 @@ export function Footer({ onPageChange }) {
 
           {/* Contact Info */}
           <div className="space-y-4">
-            <h3 className="text-lg font-semibold">Contact Info</h3>
+            <h3 className="text-lg font-semibold text-[#027103]">Contact Info</h3>
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
-                <MapPin className="w-5 h-5 text-indigo-400" />
+                <MapPin className="w-5 h-5 text-green-700" />
                 <span className="text-gray-400">
                   123 Business District, Dubai, UAE
                 </span>
               </div>
               <div className="flex items-center space-x-3">
-                <Phone className="w-5 h-5 text-indigo-400" />
+                <Phone className="w-5 h-5 text-green-700" />
                 <span className="text-gray-400">+971 4 123 4567</span>
               </div>
               <div className="flex items-center space-x-3">
-                <Mail className="w-5 h-5 text-indigo-400" />
+                <Mail className="w-5 h-5 text-green-700" />
                 <span className="text-gray-400">info@propertyhub.com</span>
               </div>
             </div>
@@ -142,13 +148,13 @@ export function Footer({ onPageChange }) {
             © 2024 PropertyHub. All rights reserved.
           </div>
           <div className="flex space-x-6">
-            <button className="text-gray-400 hover:text-white transition-colors">
+            <button className="text-gray-400 hover:text-green-800 transition-colors">
               Privacy Policy
             </button>
-            <button className="text-gray-400 hover:text-white transition-colors">
+            <button className="text-gray-400 hover:text-green-800 transition-colors">
               Terms of Service
             </button>
-            <button className="text-gray-400 hover:text-white transition-colors">
+            <button className="text-gray-400 hover:text-green-800 transition-colors">
               Careers
             </button>
           </div>

@@ -88,9 +88,10 @@ function TabsTrigger({ value, children, onClick, isActive, className = "" }) {
       onClick={onClick}
       className={`flex-1 px-3 py-1 rounded-xl text-sm font-medium transition-all duration-200 ${
         isActive
-          ? "inline-flex items-center  rounded-md font-medium transition-all disabled:opacity-50 disabled:pointer-events-none  text-white    bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 rounded-xl shadow-lg transition-all duration-200 hover:scale-105 hover:shadow-xl active:scale-95"
+          ? "inline-flex items-center  rounded-md font-medium transition-all disabled:opacity-50 disabled:pointer-events-none  text-white    bg-gradient-to-r from-green-600  hover:from-green-700  rounded-xl shadow-lg transition-all duration-200 hover:scale-105 hover:shadow-xl active:scale-95"
           : "text-gray-600 hover:bg-gray-200"
       } ${className}`}
+      style={{cursor:"pointer"}}
     >
       {children}
     </button>

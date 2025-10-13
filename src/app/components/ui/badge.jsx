@@ -19,6 +19,8 @@ function Badge({
         return "border-transparent bg-red-600 text-white hover:bg-red-700";
       case "outline":
         return "border border-gray-300 text-gray-700 hover:bg-gray-100";
+      case "green":
+        return "border-transparent bg-green-600 text-white hover:bg-green-600";
       default:
         return "border-transparent bg-green-500 text-white hover:bg-green-600";
     }

@@ -63,7 +63,7 @@ export default function BlogPage() {
           <div className="text-center mb-14">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-3">
               Latest Insights from{" "}
-              <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-blue-600 to-green-600 bg-clip-text text-transparent">
                 Dubai Real Estate
               </span>
             </h2>
@@ -119,7 +119,7 @@ export default function BlogPage() {
           </div>
 
           {/* CTA Section */}
-          <div className="mt-20 bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-2xl p-10 shadow-lg flex flex-col md:flex-row items-center justify-between gap-6">
+          <div className="mt-20 bg-gradient-to-r from-blue-600 to-green-600 text-white rounded-2xl p-10 shadow-lg flex flex-col md:flex-row items-center justify-between gap-6">
             <div>
               <h3 className="text-2xl font-bold mb-2">
                 Stay Ahead in Dubai’s Real Estate Market

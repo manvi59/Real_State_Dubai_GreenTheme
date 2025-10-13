@@ -177,7 +177,7 @@ export default function AgentProfile({ onPageChange }) {
                       </div>
                       <div className="flex space-x-2">
                         {agent.languages.map((lang) => (
-                          <Badge key={lang} variant="secondary">
+                          <Badge key={lang} variant="green" >
                             {lang}
                           </Badge>
                         ))}
@@ -186,7 +186,7 @@ export default function AgentProfile({ onPageChange }) {
                   </div>
 
                   <div className="flex flex-col space-y-3 lg:ml-6">
-                    <Button className="bg-indigo-600 hover:bg-indigo-700">
+                    <Button className="bg-green-600 hover:bg-green-700">
                       <Phone className="w-4 h-4 mr-2" />
                       Call Agent
                     </Button>
@@ -225,7 +225,7 @@ export default function AgentProfile({ onPageChange }) {
                           key={spec}
                           className="flex items-center text-gray-700"
                         >
-                          <div className="w-2 h-2 bg-indigo-600 rounded-full mr-3"></div>
+                          <div className="w-2 h-2 bg-green-600 rounded-full mr-3"></div>
                           {spec}
                         </li>
                       ))}
@@ -286,15 +286,15 @@ export default function AgentProfile({ onPageChange }) {
               </CardHeader>
               <CardContent className="space-y-4">
                 <div className="flex items-center space-x-3">
-                  <Phone className="w-5 h-5 text-indigo-600" />
+                  <Phone className="w-5 h-5 text-green-600" />
                   <span>{agent.phone}</span>
                 </div>
                 <div className="flex items-center space-x-3">
-                  <Mail className="w-5 h-5 text-indigo-600" />
+                  <Mail className="w-5 h-5 text-green-600" />
                   <span>{agent.email}</span>
                 </div>
                 <div className="flex items-center space-x-3">
-                  <MapPin className="w-5 h-5 text-indigo-600" />
+                  <MapPin className="w-5 h-5 text-green-600" />
                   <span>{agent.location}</span>
                 </div>
               </CardContent>

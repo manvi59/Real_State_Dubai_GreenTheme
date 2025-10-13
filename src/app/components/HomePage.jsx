@@ -211,18 +211,16 @@ const nextTestimonial = () => {
   return (
      <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative h-[700px] bg-gradient-to-br from-blue-500 via-indigo-500 to-purple-500 flex items-center overflow-hidden">
-        {/* Animated Background */}
-        <div 
+      {/* <section className="relative h-[700px] bg-gradient-to-br from-blue-500 via-green-500 to-purple-500 flex items-center overflow-hidden">
+         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-30"
           style={{
             backgroundImage: `url('https://images.unsplash.com/photo-1556139943-4bdca53adf1e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx8ZW58MXx8fHwxNzU5MTIzNDI2fDA&ixlib=rb-4.1.0&q=80&w=1080')`
-          }}
+           }}
         />
         
-        {/* Floating Gradient Orbs */}
-        <div className="absolute top-20 left-20 w-72 h-72 bg-gradient-to-r from-blue-300 to-indigo-400 rounded-full opacity-25 blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-20 right-20 w-96 h-96 bg-gradient-to-r from-indigo-300 to-purple-400 rounded-full opacity-25 blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
+         <div className="absolute top-20 left-20 w-72 h-72 bg-gradient-to-r from-blue-300 to-green-400 rounded-full opacity-25 blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-20 right-20 w-96 h-96 bg-gradient-to-r from-green-300 to-purple-400 rounded-full opacity-25 blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
         <div className="absolute top-1/2 left-1/3 w-64 h-64 bg-gradient-to-r from-cyan-300 to-blue-400 rounded-full opacity-20 blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
         
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -233,13 +231,11 @@ const nextTestimonial = () => {
             Discover the perfect property from our extensive collection of luxury homes, modern apartments, and commercial spaces across Dubai.
           </p>
           
-          {/* Advanced Search Bar with Animation */}
-          <div className="animate-in slide-in-from-bottom-10 duration-1000" style={{ animationDelay: '400ms' }}>
+           <div className="animate-in slide-in-from-bottom-10 duration-1000" style={{ animationDelay: '400ms' }}>
             <SearchBar onSearch={handleSearch} className="max-w-6xl mx-auto transform hover:scale-[1.02] transition-transform duration-300" />
           </div>
 
-          {/* Quick Location Tags */}
-          <div className="flex flex-wrap justify-center align-items-center gap-3 mt-8 animate-in slide-in-from-bottom-10 duration-1000" style={{ animationDelay: '600ms' }}>
+           <div className="flex flex-wrap justify-center align-items-center gap-3 mt-8 animate-in slide-in-from-bottom-10 duration-1000" style={{ animationDelay: '600ms' }}>
             <span className="text-sm text-gray-300 mr-2 flex items-center">Popular locations:</span>
             {quickLocations.map((location, index) => (
               <button
@@ -269,14 +265,79 @@ const nextTestimonial = () => {
           </div>
         </div>
         
-        {/* Scroll Indicator */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+         <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
           <div className="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center">
             <div className="w-1 h-3 bg-white/50 rounded-full mt-2 animate-pulse"></div>
           </div>
         </div>
-      </section>
+      </section> */}
 
+      <section className="relative h-[700px] flex items-center justify-center overflow-hidden">
+      {/* Background Image */}
+      <div
+        className="absolute inset-0 bg-cover bg-center"
+        style={{
+          backgroundImage: `url('/hero-bg.jpeg')`,
+          opacity: 1, // fully visible
+        }}
+      />
+
+      {/* Overlay for text readability (very subtle) */}
+      <div className="absolute inset-0 bg-black/20"></div>
+
+      {/* Content */}
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        {/* Hero Title */}
+        {/* <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-4">
+          Find Your{" "}
+          <span className="bg-gradient-to-r from-[#ea2d04] to-[#ff944d] bg-clip-text text-transparent">
+            Dream Home
+          </span>{" "}
+          in Dubai
+        </h1>
+        <p className="text-lg md:text-xl text-white/90 mb-8 max-w-3xl mx-auto">
+          Explore premium villas, modern apartments, and luxury commercial spaces across Dubai.
+        </p> */}
+
+        {/* Search Bar */}
+        <div className="max-w-5xl mx-auto">
+          <SearchBar
+            onSearch={handleSearch}
+            className="bg-white/70 backdrop-blur-md shadow-lg rounded-2xl border border-white/20 p-4 sm:p-6"
+          />
+        </div>
+
+        {/* Popular Locations */}
+        <div className="flex flex-wrap justify-center gap-3 mt-6">
+          <span className="text-white/80 mr-2 flex items-center">Popular locations:</span>
+          {quickLocations.map((loc) => (
+            <button
+              key={loc}
+              onClick={() =>
+                handleSearch({
+                  type: "buy",
+                  location: loc,
+                  propertyType: "",
+                  bedrooms: "",
+                  bathrooms: "",
+                  priceMin: "",
+                  priceMax: "",
+                  areaMin: "",
+                  areaMax: "",
+                  furnishing: "",
+                  amenities: [],
+                })
+              }
+              className="px-4 py-2 bg-white/20 text-white rounded-full hover:bg-white/30 hover:scale-105 transition-all duration-200"
+            >
+              {loc}
+            </button>
+          ))}
+        </div>
+      </div>
+    </section>
+
+  
       <section>
         <CitiesWidget/>
       </section>
@@ -290,8 +351,8 @@ const nextTestimonial = () => {
               return (
                 <div key={index} className="text-center">
                   <div className="flex justify-center mb-4">
-                    <div className="w-16 h-16 bg-gradient-to-r from-blue-100 to-indigo-100 rounded-full flex items-center justify-center">
-                      <IconComponent className="w-8 h-8 text-blue-600" />
+                    <div className="w-16 h-16 bg-gradient-to-r from-green-100 to-green-100 rounded-full flex items-center justify-center">
+                      <IconComponent className="w-8 h-8 text-green-700" />
                     </div>
                   </div>
                   <div className="text-3xl font-bold text-gray-900 mb-2">{stat.value}</div>
@@ -309,7 +370,8 @@ const nextTestimonial = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Our Services
+              Our  
+              <span className='ms-2 text-[#027103]'>Services</span>
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               Comprehensive real estate services tailored to meet all your property needs
@@ -321,15 +383,15 @@ const nextTestimonial = () => {
               const IconComponent = service.icon;
               return (
                 <div key={index} className="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow duration-300">
-                  <div className="w-12 h-12 bg-gradient-to-r from-blue-100 to-indigo-100 rounded-lg flex items-center justify-center mb-4">
-                    <IconComponent className="w-6 h-6 text-blue-600" />
+                  <div className="w-12 h-12 bg-gradient-to-r from-green-100 to-green-100 rounded-lg flex items-center justify-center mb-4">
+                    <IconComponent className="w-6 h-6 text-green-600" />
                   </div>
                   <h3 className="text-xl font-semibold text-gray-900 mb-3">{service.title}</h3>
                   <p className="text-gray-600 mb-4">{service.description}</p>
                   <ul className="space-y-2">
                     {service.features.map((feature, idx) => (
                       <li key={idx} className="text-sm text-gray-500 flex items-center">
-                        <div className="w-1.5 h-1.5 bg-blue-400 rounded-full mr-2"></div>
+                        <div className="w-1.5 h-1.5 bg-green-400 rounded-full mr-2"></div>
                         {feature}
                       </li>
                     ))}
@@ -345,8 +407,10 @@ const nextTestimonial = () => {
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            {/* text-gray-900 */}
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900  mb-4">
               Featured Properties
+              <span className='ms-2 text-[#027103]'>Properties</span>
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               Discover our handpicked selection of premium properties that offer exceptional value and location.
@@ -367,7 +431,7 @@ const nextTestimonial = () => {
             <Button 
               onClick={() => onPageChange('listings')}
               size="lg" 
-              className="bg-blue-600 hover:bg-blue-700"
+              className="bg-green-600"
             >
               View All Properties
             </Button>
@@ -380,7 +444,7 @@ const nextTestimonial = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Popular Neighborhoods
+              Popular <span className='text-[#027103]'>Neighborhoods</span>  
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               Explore Dubai's most sought-after areas and find your perfect neighborhood
@@ -425,15 +489,16 @@ const nextTestimonial = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-                Why Choose PropertyHub?
+                Why Choose  
+                <span className='ms-2 text-[#027103]'>PropertyHub?</span>
               </h2>
               <p className="text-lg text-gray-600 mb-8">
                 With over 15 years of experience in Dubai's real estate market, we're committed to providing exceptional service and results.
               </p>
               <div className="space-y-6">
                 <div className="flex items-start space-x-4">
-                  <div className="w-8 h-8 bg-gradient-to-r from-blue-100 to-indigo-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                    <Shield className="w-4 h-4 text-blue-600" />
+                  <div className="w-8 h-8 bg-gradient-to-r from-green-100 to-green-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                    <Shield className="w-4 h-4 text-green-600" />
                   </div>
                   <div>
                     <h3 className="font-semibold text-gray-900 mb-2">Trusted & Secure</h3>
@@ -441,8 +506,8 @@ const nextTestimonial = () => {
                   </div>
                 </div>
                 <div className="flex items-start space-x-4">
-                  <div className="w-8 h-8 bg-gradient-to-r from-blue-100 to-indigo-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                    <Award className="w-4 h-4 text-blue-600" />
+                  <div className="w-8 h-8 bg-gradient-to-r from-green-100 to-green-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                    <Award className="w-4 h-4 text-green-600" />
                   </div>
                   <div>
                     <h3 className="font-semibold text-gray-900 mb-2">Award-Winning Service</h3>
@@ -450,8 +515,8 @@ const nextTestimonial = () => {
                   </div>
                 </div>
                 <div className="flex items-start space-x-4">
-                  <div className="w-8 h-8 bg-gradient-to-r from-blue-100 to-indigo-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                    <Clock className="w-4 h-4 text-blue-600" />
+                  <div className="w-8 h-8 bg-gradient-to-r from-green-100 to-green-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                    <Clock className="w-4 h-4 text-green-600" />
                   </div>
                   <div>
                     <h3 className="font-semibold text-gray-900 mb-2">24/7 Support</h3>
@@ -468,7 +533,7 @@ const nextTestimonial = () => {
                 width={100}
                 height={96}
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-blue-600/20 to-transparent rounded-xl"></div>
+              <div className="absolute inset-0 bg-gradient-to-t from-green-600/20 to-transparent rounded-xl"></div>
             </div>
           </div>
         </div>
@@ -479,7 +544,8 @@ const nextTestimonial = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              What Our Clients Say
+              What Our  
+              <span className='text-[#027103] ms-2'>Clients Say</span>
             </h2>
             <p className="text-lg text-gray-600">
               Don't just take our word for it - hear from our satisfied customers
@@ -535,7 +601,7 @@ const nextTestimonial = () => {
       .filter(Boolean)
       .map((testimonial, index) => (
         <div key={index} className="bg-white rounded-2xl p-8 text-center shadow-sm">
-          <Quote className="w-12 h-12 text-blue-600 mx-auto mb-6" />
+          <Quote className="w-12 h-12 text-[#027103] mx-auto mb-6" />
           <p className="text-lg text-gray-700 mb-6 italic">
             "{testimonial.content}"
           </p>
@@ -585,7 +651,7 @@ const nextTestimonial = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Latest Insights
+              Latest  <span className='text-[#027103]'>Insights</span> 
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               Stay updated with the latest trends, tips, and news from Dubai's real estate market
@@ -610,7 +676,7 @@ const nextTestimonial = () => {
                   </div>
                   <h3 className="font-semibold text-gray-900 mb-3 line-clamp-2">{post.title}</h3>
                   <p className="text-gray-600 mb-4 line-clamp-3">{post.excerpt}</p>
-                  <Button variant="outline" size="sm" className="text-blue-600 border-blue-200 hover:bg-blue-50">
+                  <Button variant="outline" size="sm" className="text-green-600 border-green-200 hover:bg-blue-50">
                     Read More
                   </Button>
                 </div>
@@ -619,7 +685,7 @@ const nextTestimonial = () => {
           </div>
 
           <div className="text-center mt-12">
-            <Button variant="outline" size="lg" className="border-blue-200 text-blue-600 hover:bg-blue-50">
+            <Button variant="outline" size="lg" className="border-green-200 text-green-600 hover:bg-green-50">
               View All Articles
             </Button>
           </div>
@@ -632,22 +698,23 @@ const nextTestimonial = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-                Need Expert Advice?
+                Need Expert 
+                <span className='text-[#027103]'>  Advice?</span>
               </h2>
               <p className="text-lg text-gray-600 mb-8">
                 Our experienced team is here to help you make informed decisions about your real estate journey.
               </p>
               <div className="space-y-4">
                 <div className="flex items-center space-x-3">
-                  <Phone className="w-5 h-5 text-blue-600" />
+                  <Phone className="w-5 h-5 text-green-800" />
                   <span className="text-gray-700">+971 4 123 4567</span>
                 </div>
                 <div className="flex items-center space-x-3">
-                  <Mail className="w-5 h-5 text-blue-600" />
+                  <Mail className="w-5 h-5 text-green-800" />
                   <span className="text-gray-700">info@propertyhub.ae</span>
                 </div>
                 <div className="flex items-center space-x-3">
-                  <MapPin className="w-5 h-5 text-blue-600" />
+                  <MapPin className="w-5 h-5 text-green-800" />
                   <span className="text-gray-700">Downtown Dubai, UAE</span>
                 </div>
               </div>
@@ -682,7 +749,7 @@ const nextTestimonial = () => {
                   rows={4}
                   className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                 ></textarea>
-                <Button type="submit" className="w-full bg-blue-600 hover:bg-blue-700">
+                <Button type="submit" className="w-full bg-green-600">
                   Send Message
                 </Button>
               </form>
@@ -692,7 +759,7 @@ const nextTestimonial = () => {
       </section>
 
       {/* Call to Action */}
-      <section className="py-16 bg-gradient-to-r from-blue-600 to-indigo-600">
+      <section className="py-16 bg-gradient-to-r from-green-300 to-green-600">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
             Ready to List Your Property?
@@ -705,9 +772,9 @@ const nextTestimonial = () => {
               size="lg" 
               variant="secondary"
               // onClick={() => onPageChange('list-property')}
-              className="bg-white text-blue-600 hover:bg-gray-100"
+              className="bg-white text-green-600 hover:bg-gray-100"
             >
-              <span  className='text-blue-600 hover:bg-gray-100'>
+              <span  className='text-green-600 hover:bg-gray-100'>
 
               List Your Property
               </span>

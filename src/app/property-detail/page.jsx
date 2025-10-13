@@ -208,7 +208,7 @@ export default function PropertyDetail({ propertyId, onPageChange }) {
                     key={index}
                     onClick={() => setCurrentImageIndex(index)}
                     className={`relative h-20 rounded-lg overflow-hidden ${
-                      index === currentImageIndex ? 'ring-2 ring-indigo-600' : ''
+                      index === currentImageIndex ? 'ring-2 ring-green-600' : ''
                     }`}
                   >
                     <Image
@@ -245,7 +245,7 @@ export default function PropertyDetail({ propertyId, onPageChange }) {
                       {property.location}
                       {/* <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3558.8153915792523!2d75.7841840740928!3d26.877605761600844!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396db43681cc7f07%3A0x72002af09d6a6155!2sStreet%20View%20Jaipur!5e0!3m2!1sen!2sin!4v1759464838070!5m2!1sen!2sin" width="600" height="450" style={{border:0}} allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe> */}
                     </div>
-                    <div className="text-3xl font-bold text-indigo-600">
+                    <div className="text-3xl font-bold text-green-600">
                       {property.price}
                     </div>
                   </div>
@@ -269,19 +269,19 @@ export default function PropertyDetail({ propertyId, onPageChange }) {
 
                 <div className="grid grid-cols-3 gap-6 mb-8">
                   <div className="text-center p-4 bg-gray-50 rounded-lg">
-                    <Bed className="w-8 h-8 text-indigo-600 mx-auto mb-2" />
+                    <Bed className="w-8 h-8 text-green-600 mx-auto mb-2" />
                     <div className="font-semibold">
                       {property.bedrooms} Bedrooms
                     </div>
                   </div>
                   <div className="text-center p-4 bg-gray-50 rounded-lg">
-                    <Bath className="w-8 h-8 text-indigo-600 mx-auto mb-2" />
+                    <Bath className="w-8 h-8 text-green-600 mx-auto mb-2" />
                     <div className="font-semibold">
                       {property.bathrooms} Bathrooms
                     </div>
                   </div>
                   <div className="text-center p-4 bg-gray-50 rounded-lg">
-                    <Square className="w-8 h-8 text-indigo-600 mx-auto mb-2" />
+                    <Square className="w-8 h-8 text-green-600 mx-auto mb-2" />
                     <div className="font-semibold">{property.area}</div>
                   </div>
                 </div>
@@ -303,7 +303,7 @@ export default function PropertyDetail({ propertyId, onPageChange }) {
                         key={index}
                         className="flex items-center space-x-3 p-3 bg-gray-50 rounded-lg"
                       >
-                        <amenity.icon className="w-5 h-5 text-indigo-600" />
+                        <amenity.icon className="w-5 h-5 text-green-600" />
                         <span className="text-sm font-medium">
                           {amenity.label}
                         </span>
@@ -316,7 +316,7 @@ export default function PropertyDetail({ propertyId, onPageChange }) {
                         key={index}
                         className="flex items-center text-gray-700"
                       >
-                        <div className="w-2 h-2 bg-indigo-600 rounded-full mr-3"></div>
+                        <div className="w-2 h-2 bg-green-600 rounded-full mr-3"></div>
                         {feature}
                       </li>
                     ))}
@@ -378,7 +378,7 @@ export default function PropertyDetail({ propertyId, onPageChange }) {
                   </div>
                 </div>
                 <div className="space-y-3">
-                  <Button className="w-full bg-indigo-600 hover:bg-indigo-700">
+                  <Button className="w-full bg-green-600 hover:bg-green-700">
                     <Phone className="w-4 h-4 mr-2" />
                     Call Agent
                   </Button>

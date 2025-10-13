@@ -26,7 +26,7 @@ export function PropertyCard({ property, onViewDetails }) {
             className={`${
               property.tag === 'For Sale'
                 ? 'bg-green-600 hover:bg-green-700'
-                : 'bg-indigo-600 hover:bg-indigo-700'
+                : 'bg-green-600 hover:bg-green-700'
             } text-white font-medium`}
           >
             {property.tag}
@@ -54,7 +54,7 @@ export function PropertyCard({ property, onViewDetails }) {
               <MapPin className="w-4 h-4 mr-1" />
               <span className="text-sm">{property.location}</span>
             </div>
-            <div className="text-2xl font-bold text-indigo-600">
+            <div className="text-gray-600 font-semibold mb-2">
               {property.price}
             </div>
           </div>
@@ -78,7 +78,7 @@ export function PropertyCard({ property, onViewDetails }) {
 
           <Button
             onClick={() => onViewDetails(property.id)}
-            className="w-full bg-indigo-600 hover:bg-indigo-700"
+            className="w-full bg-green-600 hover:bg-green-700"
           >
             View Details
           </Button>

@@ -137,6 +137,7 @@
 
 import React from "react";
 import { MapPin } from "lucide-react";
+// import '';
 
 export default function CitiesWidget() {
   const cities = [
@@ -189,7 +190,13 @@ export default function CitiesWidget() {
         {/* Header */}
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-3">
-            Explore Real Estate in <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">Top Dubai Areas</span>
+            Explore Real Estate in
+            <span className="ms-2 bg-gradient-to-r from-[#027103] to-[#027103] bg-clip-text text-transparent">
+            Top Dubai Areas
+          </span>
+
+
+             {/* <span className="bg-gradient-to-r from-blue-600 to-green-600 bg-clip-text text-transparent">Top Dubai Areas</span> */}
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             Discover the most sought-after neighborhoods in Dubai with exclusive property listings.
@@ -222,7 +229,7 @@ export default function CitiesWidget() {
 
         {/* CTA */}
         <div className="mt-16">
-          <div className="flex flex-col md:flex-row items-center justify-between bg-gradient-to-r from-blue-600 to-indigo-600 text-white p-8 rounded-2xl shadow-lg">
+          <div className="flex flex-col md:flex-row items-center justify-between bg-[#027103] text-white p-8 rounded-2xl shadow-lg">
             <div className="flex items-center mb-4 md:mb-0">
               <div className="flex -space-x-3 mr-4">
                 {["32", "45", "65", "12"].map((id) => (

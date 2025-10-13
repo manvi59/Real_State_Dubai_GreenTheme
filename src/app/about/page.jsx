@@ -85,7 +85,7 @@ export default function page() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative py-20 bg-gradient-to-r from-indigo-600 to-purple-600 text-white"  
+      <section className="relative py-20 bg-gradient-to-r from-green-600 to-purple-600 text-white"  
        style={{
         width: '100%',
         height: '100%',
@@ -111,8 +111,8 @@ export default function page() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
               <div key={index} className="text-center">
-                <div className="bg-indigo-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <stat.icon className="w-8 h-8 text-indigo-600" />
+                <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <stat.icon className="w-8 h-8 text-green-600" />
                 </div>
                 <div className="text-3xl font-bold text-gray-900 mb-2">{stat.value}</div>
                 <div className="text-gray-600">{stat.label}</div>
@@ -166,9 +166,9 @@ export default function page() {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <Card className="p-8 text-center border-2 border-indigo-100">
+            <Card className="p-8 text-center border-2 border-green-100">
               <CardContent>
-                <div className="bg-indigo-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+                <div className="bg-green-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
                   <Target className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">Our Mission</h3>
@@ -245,7 +245,7 @@ export default function page() {
                     height={32}
                   />
                   <h3 className="text-xl font-semibold text-gray-900 mb-2">{member.name}</h3>
-                  <p className="text-indigo-600 mb-2">{member.role}</p>
+                  <p className="text-green-600 mb-2">{member.role}</p>
                   <p className="text-sm text-gray-600">{member.experience}</p>
                 </CardContent>
               </Card>
@@ -255,12 +255,12 @@ export default function page() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-indigo-600">
+      <section className="py-16 bg-green-600">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
             Ready to Work With Us?
           </h2>
-          <p className="text-xl text-indigo-100 mb-8 max-w-2xl mx-auto">
+          <p className="text-xl text-green-100 mb-8 max-w-2xl mx-auto">
             Join our team of professionals or let us help you find your dream property. We're here to make your real estate journey successful.
           </p>
           <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
@@ -268,9 +268,9 @@ export default function page() {
               size="lg" 
               variant="secondary"
               // onClick={() => onPageChange('contact')}
-              className="bg-white text-indigo-600 hover:bg-gray-100"
+              className="bg-white text-green-600 hover:bg-gray-100"
             >
-              <span className='text-indigo-600 hover:bg-gray-100'>
+              <span className='text-green-600 hover:bg-gray-100'>
 
               Contact Us
               </span>
@@ -278,7 +278,7 @@ export default function page() {
             <Button 
               size="lg" 
               variant="outline"
-              className="border-white hover:bg-white hover:text-indigo-600"
+              className="border-white hover:bg-white hover:text-green-600"
             >
               Join Our Team
             </Button>

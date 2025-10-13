@@ -116,7 +116,9 @@ import { Card, CardContent, CardHeader, CardTitle } from '../components/ui/card'
         {/* Header */}
         <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center mb-8">
           <div>
-            <h1 className="text-3xl font-bold text-gray-900 mb-2">Property Listings</h1>
+            <h1 className="text-3xl font-bold text-gray-900 mb-2">Property   
+              <span className='ms-2 text-[#027103]'>Listings</span>
+            </h1>
             <p className="text-gray-600">Showing {properties.length} properties</p>
           </div>
           
@@ -135,13 +137,13 @@ import { Card, CardContent, CardHeader, CardTitle } from '../components/ui/card'
             <div className="flex border rounded-lg p-1">
               <button
                 onClick={() => setViewMode('grid')}
-                className={`p-2 rounded ${viewMode === 'grid' ? 'bg-indigo-600 text-white' : 'text-gray-600'}`}
+                className={`p-2 rounded ${viewMode === 'grid' ? 'bg-green-600 text-white' : 'text-gray-600'}`}
               >
                 <Grid className="w-4 h-4" />
               </button>
               <button
                 onClick={() => setViewMode('list')}
-                className={`p-2 rounded ${viewMode === 'list' ? 'bg-indigo-600 text-white' : 'text-gray-600'}`}
+                className={`p-2 rounded ${viewMode === 'list' ? 'bg-green-600 text-white' : 'text-gray-600'}`}
               >
                 <List className="w-4 h-4" />
               </button>
@@ -257,7 +259,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '../components/ui/card'
                   </label>
                 </div>
 
-                <Button className="w-full bg-indigo-600 hover:bg-indigo-700">
+                <Button className="w-full bg-green-600 hover:bg-green-700">
                   Apply Filters
                 </Button>
               </CardContent>
@@ -295,11 +297,11 @@ import { Card, CardContent, CardHeader, CardTitle } from '../components/ui/card'
                               {property.title}
                             </h3>
                             <p className="text-gray-600 mb-2">{property.location}</p>
-                            <div className="text-2xl font-bold text-indigo-600">
+                            <div className="text-2xl font-bold text-green-600">
                               {property.price}
                             </div>
                           </div>
-                          <div className="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm font-medium">
+                          <div className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium">
                             {property.tag}
                           </div>
                         </div>

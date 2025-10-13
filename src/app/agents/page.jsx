@@ -65,7 +65,7 @@ const AgentsPage = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero */}
-      <div className="bg-indigo-600 py-16 text-white"   style={{
+      <div className="bg-green-600 py-16 text-white"   style={{
         width: '100%',
         height: '100%',
         backgroundImage: "url('agents.jpg')",
@@ -91,7 +91,7 @@ const AgentsPage = () => {
             value={search}
             onChange={(e) => setSearch(e.target.value)}
           />
-          <button className="bg-indigo-600 text-white px-6 py-2 rounded-lg hover:bg-indigo-700">
+          <button className="bg-green-600 text-white px-6 py-2 rounded-lg hover:bg-green-700">
             Search
           </button>
         </div>
@@ -129,20 +129,20 @@ const AgentsPage = () => {
               <div className="flex gap-2 w-full">
                 <a
                   href={`tel:${agent.phone}`}
-                  className="flex-1 bg-indigo-600 text-white px-4 py-2 rounded-lg text-center hover:bg-indigo-700"
+                  className="flex-1 bg-green-600 text-white px-4 py-2 rounded-lg text-center hover:bg-green-700"
                 >
                   Call
                 </a>
                 <a
                   href={`mailto:${agent.email}`}
-                  className="flex-1 border border-indigo-600 text-indigo-600 px-4 py-2 rounded-lg text-center hover:bg-indigo-600 hover:text-white transition"
+                  className="flex-1 border border-green-600 text-green-600 px-4 py-2 rounded-lg text-center hover:bg-green-600 hover:text-white transition"
                 >
                   Email
                 </a>
               </div>
               
               <Link href="/agent-profile">
-              <button className="mt-4 w-full bg-gray-100 text-indigo-600 px-4 py-2 rounded-lg hover:bg-indigo-600 hover:text-white transition" 
+              <button className="mt-4 w-full bg-gray-100 text-green-600 px-4 py-2 rounded-lg hover:bg-green-600 hover:text-white transition" 
               style={{cursor:"pointer"}}
               >
                 View Listings ({agent.properties})

@@ -167,7 +167,7 @@ export default function Contact({ onPageChange }) {
                     />
                   </div>
                   
-                  <Button type="submit" className="w-full bg-indigo-600 hover:bg-indigo-700">
+                  <Button type="submit" className="w-full bg-green-600 hover:bg-green-700">
                     Send Message
                   </Button>
                 </form>
@@ -200,8 +200,8 @@ export default function Contact({ onPageChange }) {
                 <Card key={index}>
                   <CardContent className="p-6">
                     <div className="flex items-start space-x-4">
-                      <div className="bg-indigo-100 p-3 rounded-lg">
-                        <info.icon className="w-6 h-6 text-indigo-600" />
+                      <div className="bg-green-100 p-3 rounded-lg">
+                        <info.icon className="w-6 h-6 text-green-600" />
                       </div>
                       <div>
                         <h3 className="font-semibold text-gray-900 mb-2">{info.title}</h3>
@@ -229,15 +229,15 @@ export default function Contact({ onPageChange }) {
                   <h3 className="font-semibold text-lg text-gray-900 mb-4">{office.name}</h3>
                   <div className="space-y-3">
                     <div className="flex items-start space-x-3">
-                      <MapPin className="w-5 h-5 text-indigo-600 mt-0.5" />
+                      <MapPin className="w-5 h-5 text-green-600 mt-0.5" />
                       <span className="text-gray-600">{office.address}</span>
                     </div>
                     <div className="flex items-center space-x-3">
-                      <Phone className="w-5 h-5 text-indigo-600" />
+                      <Phone className="w-5 h-5 text-green-600" />
                       <span className="text-gray-600">{office.phone}</span>
                     </div>
                     <div className="flex items-center space-x-3">
-                      <Mail className="w-5 h-5 text-indigo-600" />
+                      <Mail className="w-5 h-5 text-green-600" />
                       <span className="text-gray-600">{office.email}</span>
                     </div>
                   </div>
