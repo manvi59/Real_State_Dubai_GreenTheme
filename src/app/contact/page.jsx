@@ -97,7 +97,7 @@ export default function Contact({ onPageChange }) {
             <Card>
               <CardHeader>
                 <CardTitle className="flex items-center">
-                  <Send className="w-5 h-5 mr-2" />
+                  <Send className="w-5 h-5 mr-2 text-[#027103]" />
                   Send us a Message
                 </CardTitle>
               </CardHeader>
@@ -167,7 +167,7 @@ export default function Contact({ onPageChange }) {
                     />
                   </div>
                   
-                  <Button type="submit" className="w-full bg-indigo-600 hover:bg-indigo-700">
+                  <Button type="submit" className="w-full bg-[#51A687] hover:bg-[#1f85a8]">
                     Send Message
                   </Button>
                 </form>
@@ -197,11 +197,11 @@ export default function Contact({ onPageChange }) {
             {/* Contact Details */}
             <div className="grid grid-cols-1 gap-6">
               {contactInfo.map((info, index) => (
-                <Card key={index}>
+                <Card key={index} className="min-h-[182px]">
                   <CardContent className="p-6">
                     <div className="flex items-start space-x-4">
-                      <div className="bg-indigo-100 p-3 rounded-lg">
-                        <info.icon className="w-6 h-6 text-indigo-600" />
+                      <div className="bg-green p-3 rounded-lg">
+                        <info.icon className="w-6 h-6 text-[#027103]" />
                       </div>
                       <div>
                         <h3 className="font-semibold text-gray-900 mb-2">{info.title}</h3>
@@ -229,19 +229,19 @@ export default function Contact({ onPageChange }) {
                   <h3 className="font-semibold text-lg text-gray-900 mb-4">{office.name}</h3>
                   <div className="space-y-3">
                     <div className="flex items-start space-x-3">
-                      <MapPin className="w-5 h-5 text-indigo-600 mt-0.5" />
+                      <MapPin className="w-5 h-5 text-[#027103] mt-0.5" />
                       <span className="text-gray-600">{office.address}</span>
                     </div>
                     <div className="flex items-center space-x-3">
-                      <Phone className="w-5 h-5 text-indigo-600" />
+                      <Phone className="w-5 h-5 text-[#027103]" />
                       <span className="text-gray-600">{office.phone}</span>
                     </div>
                     <div className="flex items-center space-x-3">
-                      <Mail className="w-5 h-5 text-indigo-600" />
+                      <Mail className="w-5 h-5 text-[#027103]" />
                       <span className="text-gray-600">{office.email}</span>
                     </div>
                   </div>
-                  <Button variant="outline" className="w-full mt-4">
+                  <Button variant="outline" className="w-full mt-4 border-[#027103] text-[#027103] hover:bg-[#027103] hover:text-">
                     Get Directions
                   </Button>
                 </CardContent>

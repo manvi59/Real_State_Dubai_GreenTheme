@@ -1,5 +1,5 @@
 import { Users, Target, Award, TrendingUp } from 'lucide-react';
-import Button  from '../components/ui/button';
+import Button from '../components/ui/button';
 import { Card, CardContent } from '../components/ui/card';
 import Image from 'next/image';
 // import { ImageWithFallback } from './figma/ImageWithFallback';
@@ -12,7 +12,7 @@ export default function page() {
     { icon: Target, label: 'Years Exnperience', value: '15' }
   ];
 
-  
+
 
   const teamMembers = [
     {
@@ -85,15 +85,15 @@ export default function page() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative py-20 bg-gradient-to-r from-indigo-600 to-purple-600 text-white"  
-       style={{
-        width: '100%',
-        height: '100%',
-        backgroundImage: "url('/about (2).jpg')",
-        backgroundSize: 'cover',
-        backgroundRepeat: 'no-repeat',
-        backgroundPosition: 'center',
-            }}
+      <section className="relative py-20 bg-gradient-to-r from-indigo-600 to-purple-600 text-white"
+        style={{
+          width: '100%',
+          height: '100%',
+          backgroundImage: "url('/about (2).jpg')",
+          backgroundSize: 'cover',
+          backgroundRepeat: 'no-repeat',
+          backgroundPosition: 'center',
+        }}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl md:text-6xl font-bold mb-6">
@@ -106,21 +106,24 @@ export default function page() {
       </section>
 
       {/* Stats Section */}
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
-              <div key={index} className="text-center">
-                <div className="bg-indigo-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <stat.icon className="w-8 h-8 text-indigo-600" />
-                </div>
-                <div className="text-3xl font-bold text-gray-900 mb-2">{stat.value}</div>
-                <div className="text-gray-600">{stat.label}</div>
-              </div>
-            ))}
+     <section className="py-16 bg-white">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+      {stats.map((stat, index) => (
+        <div key={index} className="text-center">
+          {/* Icon Circle */}
+          <div className="bg-[#E0F7FF] w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+            <stat.icon className="w-8 h-8 text-[#027103]" />
           </div>
+
+          {/* Numbers and Labels */}
+          <div className="text-3xl font-bold text-gray-900 mb-2">{stat.value}</div>
+          <div className="text-gray-600">{stat.label}</div>
         </div>
-      </section>
+      ))}
+    </div>
+  </div>
+</section>
 
       {/* Who We Are Section */}
       <section className="py-16 bg-gray-50">
@@ -164,7 +167,7 @@ export default function page() {
               We are driven by a clear mission and guided by an ambitious vision for the future of real estate.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <Card className="p-8 text-center border-2 border-indigo-100">
               <CardContent>
@@ -173,12 +176,12 @@ export default function page() {
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">Our Mission</h3>
                 <p className="text-gray-700 leading-relaxed">
-                  To provide exceptional real estate services that exceed our clients' expectations through innovative solutions, 
+                  To provide exceptional real estate services that exceed our clients' expectations through innovative solutions,
                   professional expertise, and unwavering commitment to integrity and excellence.
                 </p>
               </CardContent>
             </Card>
-            
+
             <Card className="p-8 text-center border-2 border-green-100">
               <CardContent>
                 <div className="bg-green-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
@@ -186,7 +189,7 @@ export default function page() {
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">Our Vision</h3>
                 <p className="text-gray-700 leading-relaxed">
-                  To be the most trusted and innovative real estate company in the region, setting new standards for 
+                  To be the most trusted and innovative real estate company in the region, setting new standards for
                   customer service and transforming the way people buy, sell, and invest in properties.
                 </p>
               </CardContent>
@@ -206,7 +209,7 @@ export default function page() {
               The principles that guide our actions and define our culture.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {values.map((value, index) => (
               <Card key={index} className="p-6 text-center hover:shadow-lg transition-shadow">
@@ -232,7 +235,7 @@ export default function page() {
               Our experienced professionals are dedicated to helping you achieve your real estate goals.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {teamMembers.map((member) => (
               <Card key={member.id} className="overflow-hidden hover:shadow-lg transition-shadow">
@@ -255,36 +258,36 @@ export default function page() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-indigo-600">
+      <section className="py-16 bg-[#027103]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
             Ready to Work With Us?
           </h2>
-          <p className="text-xl text-indigo-100 mb-8 max-w-2xl mx-auto">
+          <p className="text-xl text-[#E0F7FF] mb-8 max-w-2xl mx-auto">
             Join our team of professionals or let us help you find your dream property. We're here to make your real estate journey successful.
           </p>
           <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
-            <Button 
-              size="lg" 
+            <Button
+              size="lg"
               variant="secondary"
-              // onClick={() => onPageChange('contact')}
-              className="bg-white text-indigo-600 hover:bg-gray-100"
+              className="bg-white text-[#027103] hover:bg-gray-100"
             >
-              <span className='text-indigo-600 hover:bg-gray-100'>
-
-              Contact Us
+              <span className='text-[#027103] hover:bg-gray-100'>
+                Contact Us
               </span>
             </Button>
-            <Button 
-              size="lg" 
+
+            <Button
+              size="lg"
               variant="outline"
-              className="border-white hover:bg-white hover:text-indigo-600"
+              className="border-white hover:bg-white hover:text-[#027103]"
             >
               Join Our Team
             </Button>
           </div>
         </div>
       </section>
+
     </div>
   );
 }

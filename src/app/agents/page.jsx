@@ -65,14 +65,14 @@ const AgentsPage = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero */}
-      <div className="bg-indigo-600 py-16 text-white"   style={{
+      <div className="bg-indigo-600 py-16 text-white" style={{
         width: '100%',
         height: '100%',
         backgroundImage: "url('agents.jpg')",
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',
         backgroundPosition: 'center',
-            }}>
+      }}>
         <div className="max-w-7xl mx-auto px-4 text-center">
           <h1 className="text-4xl font-bold mb-4">Meet Our Agents</h1>
           <p className="text-lg opacity-90">
@@ -91,11 +91,12 @@ const AgentsPage = () => {
             value={search}
             onChange={(e) => setSearch(e.target.value)}
           />
-          <button className="bg-indigo-600 text-white px-6 py-2 rounded-lg hover:bg-indigo-700">
+          <button className="bg-[#027103] text-white px-6 py-2 rounded-lg hover:bg-[#027103] transition">
             Search
           </button>
         </div>
       </div>
+
 
       {/* Agents Grid */}
       <div className="max-w-7xl mx-auto px-4 py-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -112,41 +113,50 @@ const AgentsPage = () => {
               />
               <h3 className="text-xl font-bold mb-1">{agent.name}</h3>
               <p className="text-gray-600 mb-2">{agent.title}</p>
+
+              {/* Rating Stars */}
               <div className="flex items-center gap-2 mb-2">
                 {[...Array(5)].map((_, i) => (
                   <Star
                     key={i}
-                    className={`w-4 h-4 ${
-                      i < Math.round(agent.rating) ? "text-yellow-400 fill-current" : "text-gray-300"
-                    }`}
+                    className={`w-4 h-4 ${i < Math.round(agent.rating)
+                        ? "text-yellow-400 fill-current"
+                        : "text-gray-300"
+                      }`}
                   />
                 ))}
                 <span className="text-gray-600 text-sm">({agent.reviews})</span>
               </div>
+
+              {/* Location */}
               <div className="flex items-center gap-2 text-gray-600 mb-4">
                 <MapPin className="w-4 h-4" /> {agent.location}
               </div>
+
+              {/* Buttons */}
               <div className="flex gap-2 w-full">
                 <a
                   href={`tel:${agent.phone}`}
-                  className="flex-1 bg-indigo-600 text-white px-4 py-2 rounded-lg text-center hover:bg-indigo-700"
+                  className="flex-1 bg-[#027103] text-white px-4 py-2 rounded-lg text-center hover:bg-[#027103] transition"
                 >
                   Call
                 </a>
                 <a
                   href={`mailto:${agent.email}`}
-                  className="flex-1 border border-indigo-600 text-indigo-600 px-4 py-2 rounded-lg text-center hover:bg-indigo-600 hover:text-white transition"
+                  className="flex-1 border border-[#027103] text-[#027103] px-4 py-2 rounded-lg text-center hover:bg-[#027103] hover:text-white transition"
                 >
                   Email
                 </a>
               </div>
-              
+
+              {/* View Listings Button */}
               <Link href="/agent-profile">
-              <button className="mt-4 w-full bg-gray-100 text-indigo-600 px-4 py-2 rounded-lg hover:bg-indigo-600 hover:text-white transition" 
-              style={{cursor:"pointer"}}
-              >
-                View Listings ({agent.properties})
-              </button>
+                <button
+                  className="mt-4 w-full bg-gray-100 text-[#027103] px-4 py-2 rounded-lg hover:bg-[#027103] hover:text-white transition"
+                  style={{ cursor: "pointer" }}
+                >
+                  View Listings ({agent.properties})
+                </button>
               </Link>
             </div>
           </div>
