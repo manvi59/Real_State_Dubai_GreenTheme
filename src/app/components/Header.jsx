@@ -1,7 +1,7 @@
 // components/Navigation.js
 "use client";
 import { useState } from "react";
-// import { Menu, X, Home, Building, Users } from "lucide-react";
+import { Menu, X, Home, Building, Users } from "lucide-react";
 import { FaBars, FaTimes, FaHome, FaBuilding, FaUsers } from "react-icons/fa";
 
 import Button from "../components/ui/button.jsx";
@@ -130,7 +130,8 @@ export function Header() {
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="p-2 rounded-md text-gray-700 hover:text-green-600 hover:bg-gray-50"
             >
-              {/* {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />} */}
+              
+              {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
           </div>
         </div>
@@ -139,29 +140,38 @@ export function Header() {
         {isMenuOpen && (
           <div className="md:hidden border-t">
             <div className="px-2 pt-2 pb-3 space-y-1">
-              {navItems.map((item) => (
+              {navItems.map((item , indx) => (
+                <Link href={item?.pagelink} key={indx}
+                 
+                >
+   
                 <button
                   key={item.id}
                   onClick={() => {
                     // onPageChange(item.id === "home" ? "home" : "listings");
                     setIsMenuOpen(false);
                   }}
-                  className={`w-full text-left px-3 py-2 rounded-md transition-colors ${
+                  className={`w-full text-left px-3 py-2 rounded-md transition-colors cursor-pointer
+ ${
                     currentPage === item.id ||
                     (item.id === "home" && currentPage === "home")
                       ? "text-green-600 bg-green-50"
                       : "text-gray-700 hover:text-green-600 hover:bg-gray-50"
                   }`}
+                    // style={{cursor:"pointer !important"}}
                 >
                   {item.label}
                 </button>
+                </Link>
               ))}
+
+              <Link href={"/about"}>
               <button
                 onClick={() => {
                   //   onPageChange("about");
                   setIsMenuOpen(false);
                 }}
-                className={`w-full text-left px-3 py-2 rounded-md transition-colors ${
+                className={`w-full text-left px-3 py-2 rounded-md transition-colors cursor-pointer ${
                   currentPage === "about"
                     ? "text-green-600 bg-green-50"
                     : "text-gray-700 hover:text-green-600 hover:bg-gray-50"
@@ -169,12 +179,15 @@ export function Header() {
               >
                 About
               </button>
+              </Link>
+              <Link href={"/contact"}>
+
               <button
                 onClick={() => {
                   //   onPageChange("contact");
                   setIsMenuOpen(false);
                 }}
-                className={`w-full text-left px-3 py-2 rounded-md transition-colors ${
+                className={`w-full text-left px-3 py-2 rounded-md transition-colors  cursor-pointer ${
                   currentPage === "contact"
                     ? "text-green-600 bg-green-50"
                     : "text-gray-700 hover:text-green-600 hover:bg-gray-50"
@@ -182,10 +195,12 @@ export function Header() {
               >
                 Contact
               </button>
+              </Link>
               <div className="border-t pt-4 mt-4 space-y-2">
-                <button
+                <Link href={"/property-listings"}>
+                 <button
                   variant="outline"
-                  className="w-full"
+                  className="w-full cursor-pointer bg-green-700 py-2  mb-3 rounded-3xl text-white"
                   onClick={() => {
                     // onPageChange("list-property");
                     setIsMenuOpen(false);
@@ -193,14 +208,18 @@ export function Header() {
                 >
                   List Property
                 </button>
+                </Link>
+                <Link href={"/signin"}  >
+                
                 <button
-                  className="w-full"
+                  className="w-full cursor-pointer "
                   onClick={() => {
                     setIsMenuOpen(false);
                   }}
                 >
                   Sign In
                 </button>
+                </Link>
               </div>
             </div>
           </div>
