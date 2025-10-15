@@ -32,7 +32,7 @@ export function Header() {
   return (
     <nav className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b shadow-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center ">
+        <div className="flex justify-between items-center py-3">
           {/* Logo */}
 
           <Link href="/">
@@ -40,11 +40,12 @@ export function Header() {
               <div className="text-white p-2 rounded-lg mr-3">
                 {/* h-16 height changed */}
                 {/* <FaHome className="w-6 h-6" /> */}
-                <Image src={"/milkiyat_logo.png"} width={85} height={85} alt="milkiyat"/>
+                {/* <Image src={"/milkiyat_logo.png"} width={85} height={85} alt="milkiyat"/> */}
+                <Image src={"/Milkiyat.png"} width={150} height={150} alt="milkiyat"/>
               </div>
-              <span className="text-xl font-semibold text-gray-900">
+              {/* <span className="text-xl font-semibold text-gray-900">
                 milkiyat
-              </span>
+              </span> */}
             </div>
           </Link>
 

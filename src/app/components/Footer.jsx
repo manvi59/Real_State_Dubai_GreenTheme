@@ -15,14 +15,16 @@ export function Footer({ onPageChange }) {
               <div className="  text-white  rounded-lg mr-3">
                 {/* <Home className="w-6 h-6" /> */}
               
-              <Image src={"/milkiyat_logo.png"} width={85} height={85} alt="milkiyat"/>
+              {/* <Image src={"/milkiyat_logo.png"} width={85} height={85} alt="milkiyat"/> */}
+            <Image src={"/Milkiyat.png"} width={150} height={150} alt="milkiyat"/>
+              
                 
               </div>
-              <span className="text-xl font-semibold text-gray-900">
+              {/* <span className="text-xl font-semibold text-gray-900">
                 milkiyat
-              </span>
+              </span> */}
             </div>
-            <p className="text-gray-400 ">
+            <p className="text-gray-400 mt-3">
               Your trusted partner in finding the perfect home. We connect buyers,
               sellers, and renters with the best properties in the market.
             </p>
@@ -145,7 +147,7 @@ export function Footer({ onPageChange }) {
         {/* Footer Bottom */}
         <div className="border-t border-gray-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
           <div className="text-gray-400 mb-4 md:mb-0">
-            © 2024 PropertyHub. All rights reserved.
+            © 2025 Milkiyat. All rights reserved.
           </div>
           <div className="flex space-x-6">
             <button className="text-gray-400 hover:text-green-800 transition-colors">
