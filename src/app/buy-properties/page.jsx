@@ -54,17 +54,22 @@ const BuyProperties = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <div className="bg-green-600 py-16 text-white" 
-        style={{
-    width: '100%',
-    height: '100%',
-    backgroundImage: "url('/buy.jpg')",
-    backgroundSize: 'cover',
-    backgroundRepeat: 'no-repeat',
-    backgroundPosition: 'center',
-  }}
+      <div className="relative w-full h-[300px] text-white" 
+  //       style={{
+  //   width: '100%',
+  //   height: '100%',
+  //   backgroundImage: "url('/buy.jpg')",
+  //   backgroundSize: 'cover',
+  //   backgroundRepeat: 'no-repeat',
+  //   backgroundPosition: 'center',
+  // }}
       >
-        <div className="max-w-7xl mx-auto px-4 text-center">
+        <img
+        src="/buy.jpg"
+        alt="Contact Us"
+        className="w-full h-full object-cover "
+      />
+        <div className=" absolute inset-0 flex flex-col items-center justify-center text-center px-4">
           <h1 className="text-4xl font-bold mb-4">Buy Properties in Dubai</h1>
           <p className="text-lg opacity-90">
             Explore the best villas, apartments, and luxury homes for sale

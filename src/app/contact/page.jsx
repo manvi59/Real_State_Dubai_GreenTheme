@@ -402,11 +402,11 @@ export default function Contact() {
       </div> */}
       <div className="relative w-full h-[400px]">
   {/* Background Image */}
-  <img
-    src="/contact4.jpg"
-    alt="Contact Us"
-    className="w-full h-full object-cover "
-  />
+      <img
+        src="/contact4.jpg"
+        alt="Contact Us"
+        className="w-full h-full object-cover "
+      />
 
   {/* Overlay Gradient */}
   <div className="absolute "></div>

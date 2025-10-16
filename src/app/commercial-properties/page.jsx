@@ -54,7 +54,7 @@ const CommericalProperties = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <div className=" py-16 text-white"  
+      {/* <div className=" py-16 text-white"  
     style={{
     width: '100%',
     height: '100%',
@@ -67,6 +67,22 @@ const CommericalProperties = () => {
           <h1 className="text-4xl font-bold mb-4">Commerical Properties in Dubai</h1>
           <p className="text-lg opacity-90">
             Explore the best villas, apartments, and luxury homes for Commerical
+          </p>
+        </div>
+      </div> */}
+
+         <div className="relative w-full h-[300px] text-white" 
+   
+      >
+        <img
+        src="/sell.jpg"
+        alt="Commerical Properties"
+        className="w-full h-full object-cover "
+      />
+        <div className=" absolute inset-0 flex flex-col items-center justify-center text-center px-4">
+          <h1 className="text-4xl font-bold mb-4">Commerical Properties in Dubai</h1>
+          <p className="text-lg opacity-90">
+            Explore the best villas, apartments, and luxury homes for sale
           </p>
         </div>
       </div>

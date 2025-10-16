@@ -65,7 +65,7 @@ const AgentsPage = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero */}
-      <div className="bg-green-600 py-16 text-white"   style={{
+      {/* <div className="bg-green-600 py-16 text-white"   style={{
         width: '100%',
         height: '100%',
         backgroundImage: "url('agents.jpg')",
@@ -74,6 +74,22 @@ const AgentsPage = () => {
         backgroundPosition: 'center',
             }}>
         <div className="max-w-7xl mx-auto px-4 text-center">
+          <h1 className="text-4xl font-bold mb-4">Meet Our Agents</h1>
+          <p className="text-lg opacity-90">
+            Find the best real estate agents to help you buy your dream property
+          </p>
+        </div>
+      </div> */}
+
+       <div className="relative w-full h-[270px] text-white" 
+   
+      >
+        <img
+        src="/agents.jpg"
+        alt="Commerical Properties"
+        className="w-full h-full object-cover "
+      />
+        <div className=" absolute inset-0 flex flex-col items-center justify-center text-center px-4">
           <h1 className="text-4xl font-bold mb-4">Meet Our Agents</h1>
           <p className="text-lg opacity-90">
             Find the best real estate agents to help you buy your dream property
