@@ -1,0 +1,60 @@
+| Role                         | Purpose                                                         | Permissions                                                                                                                     |
+| ---------------------------- | --------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
+| 🏡 **User (Buyer/Renter)**   | Explore, search, and contact vendors to buy or rent properties. | Can view listings, save favorites, send inquiries.                                                                              |
+| 🧱 **Vendor (Seller/Agent)** | Add, edit, and manage their own property listings.              | Can post new properties, update or delete their own posts.                                                                      |
+| 🛠️ **Admin**                | Manage and monitor the entire platform.                         | Full access to approve/reject vendor listings, verify users, view analytics, manage payments, and delete inappropriate content. |
+
+
+
+
+2. What the Admin Dashboard Should Include
+
+Here’s a concept design for your Admin Dashboard:
+
+🧭 Main Sections:
+
+Overview Panel
+
+Total Users
+
+Total Vendors
+
+Total Properties Listed
+
+Pending Approvals
+
+Revenue Summary
+
+Manage Properties
+
+Approve / Reject new listings
+
+Feature premium properties
+
+Edit or delete inappropriate listings
+
+Manage Users & Vendors
+
+Activate / Suspend accounts
+
+Verify vendors
+
+Handle user complaints
+
+Transactions / Payments
+
+View completed transactions
+
+Check commission reports
+
+Manage refunds/disputes
+
+Site Settings
+
+Manage categories (e.g., Apartments, Villas)
+
+Update site banners & homepage highlights
+
+Analytics
+
+Track visitor count, top-performing agents, property engagement, etc.
