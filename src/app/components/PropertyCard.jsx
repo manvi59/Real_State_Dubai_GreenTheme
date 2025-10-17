@@ -27,7 +27,7 @@ export function PropertyCard({ property, onViewDetails }) {
               property.tag === 'For Sale'
                 ? 'bg-green-600 hover:bg-green-700'
                 : 'bg-green-600 hover:bg-green-700'
-            } text-white font-medium`}
+            } text-white font-medium`} 
           >
             {property.tag}
           </Badge>
