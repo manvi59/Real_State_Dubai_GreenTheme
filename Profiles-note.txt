@@ -58,3 +58,14 @@ Update site banners & homepage highlights
 Analytics
 
 Track visitor count, top-performing agents, property engagement, etc.
+
+
+
+----------------------------------- for the admin ---------------------------------
+
+
+/admin/login
+/admin/dashboard
+/admin/properties
+/admin/vendors
+/admin/settings
