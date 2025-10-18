@@ -412,10 +412,37 @@ const nextTestimonial = () => {
               Featured Properties
               <span className='ms-2 text-[#027103]'>Properties</span>
             </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            {/* <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               Discover our handpicked selection of premium properties that offer exceptional value and location.
-            </p>
+            </p> */}
+              {/* Filter Section */}
+<div className="flex justify-center mt-8">
+  <div className="flex flex-wrap justify-center gap-4 bg-white border border-gray-200 rounded-2xl shadow-sm p-4">
+    {[
+      "Dubai",
+      "Abu Dhabi",
+      "Sharjah",
+      "Ajman",
+      "Ras Al Khaimah",
+      "Umm Al Quwain",
+    ].map((city, index) => (
+      <button
+        key={index}
+        className={`px-6 py-2 text-base font-medium rounded-xl transition-all duration-200 ${
+          city === "Dubai"
+            ? "bg-green-100 text-green-700 border border-green-500"
+            : "text-gray-800 hover:bg-green-50 hover:text-green-700"
+        }`}
+      >
+        {city}
+      </button>
+    ))}
+  </div>
+</div> 
           </div>
+
+         
+
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {featuredProperties.map((property) => (
