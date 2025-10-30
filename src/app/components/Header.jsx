@@ -98,6 +98,19 @@ export function Header() {
               Contact
             </button>
              </Link>
+             <Link href={`/wishlist`}>
+            <button
+              //   onClick={() => onPageChange("contact")}
+              className={`px-3 py-2 rounded-md transition-colors ${
+                currentPage === "wishlist"
+                  ? "text-green-600 bg-green-50"
+                  : "text-gray-700 hover:text-green-600 hover:bg-gray-50"
+              }`}
+              style={{ cursor: "pointer !important" }}
+            >
+              wishlist
+            </button>
+             </Link>
           </div>
 
           {/* Desktop buttons */}
@@ -195,6 +208,22 @@ export function Header() {
                 }`}
               >
                 Contact
+              </button>
+              </Link>
+              <Link href={"/wishlist"}>
+
+              <button
+                onClick={() => {
+                  //   onPageChange("contact");
+                  setIsMenuOpen(false);
+                }}
+                className={`w-full text-left px-3 py-2 rounded-md transition-colors  cursor-pointer ${
+                  currentPage === "contact"
+                    ? "text-green-600 bg-green-50"
+                    : "text-gray-700 hover:text-green-600 hover:bg-gray-50"
+                }`}
+              >
+                wishlist
               </button>
               </Link>
               <div className="border-t pt-4 mt-4 space-y-2">

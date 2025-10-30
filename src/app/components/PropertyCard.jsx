@@ -6,7 +6,7 @@ import { Card, CardContent } from './ui/card';
 // import { ImageWithFallback } from './figma/ImageWithFallback';
 import Image from 'next/image';
 
-export function PropertyCard({ property, onViewDetails }) {
+export function PropertyCard({ property, onViewDetails ,removeWishlist=false}) {
   const [isFavorited, setIsFavorited] = useState(false);
 
   return (
@@ -78,10 +78,20 @@ export function PropertyCard({ property, onViewDetails }) {
 
           <Button
             onClick={() => onViewDetails(property.id)}
-            className="w-full bg-green-600 hover:bg-green-700"
+            className={ `${removeWishlist?"":"w-full"} bg-green-600 hover:bg-green-700`}
           >
             View Details
           </Button>
+            {removeWishlist && 
+
+           <Button
+            onClick={() => onViewDetails(property.id)}
+            className={` ms-3 bg-light-600 hover:bg-gray-700`}
+          >
+            Remove Wishlist
+          </Button>
+            }
+ 
         </div>
       </CardContent>
     </Card>
