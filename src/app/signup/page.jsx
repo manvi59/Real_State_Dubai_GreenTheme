@@ -161,7 +161,7 @@ export default function AuthPages({ mode, onPageChange }) {
                 </div>
               </div>
 
-              {mode === "signup" && (
+              
                 <div>
                   <label className="block text-sm font-medium mb-2">
                     Phone Number
@@ -180,7 +180,7 @@ export default function AuthPages({ mode, onPageChange }) {
                     />
                   </div>
                 </div>
-              )}
+              
               <div>
                 <label className="block text-sm font-medium mb-2">
                   Address
@@ -320,28 +320,13 @@ export default function AuthPages({ mode, onPageChange }) {
                 </div>
               )} */}
 
-              {mode === "signin" && (
-                <div className="flex items-center justify-between">
-                  <label className="flex items-center">
-                    <input
-                      type="checkbox"
-                      className="rounded border-gray-300 text-green-600 shadow-sm focus:ring-green-500"
-                    />
-                    <span className="ml-2 text-sm text-gray-600">
-                      Remember me
-                    </span>
-                  </label>
-                  <Button variant="link" className="text-sm p-0">
-                    Forgot password?
-                  </Button>
-                </div>
-              )}
+              
 
               <Button
                 type="submit"
                 className="w-full bg-green-600 hover:bg-green-700"
               >
-                {mode === "signin" ? "Sign In" : "Create Account"}
+                Create Account
               </Button>
             </form>
 
